@@ -8,6 +8,7 @@
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
+    width: 100%;
     height: 100%;
 }
 
@@ -24,7 +25,8 @@ header {
     position: sticky;
 }
 
-#btnScrollToTop {
+
+/*#btnScrollToTop {
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -38,8 +40,16 @@ header {
     outline: none;
     cursor: pointer;
     font-size: 18px;
-}
+}*/
 
+.menu-btn {
+    display: flex;
+    display: none;
+    align-items: center;
+    margin-left: auto;
+    font-size: 48px;
+    cursor: pointer;
+}
 .logo-hero {
     display: flex;
     align-items: center;
@@ -60,6 +70,7 @@ header {
 
 .link-hero a {
     text-decoration: none;
+    color: #6D2F9E;
     margin: 0 16px;
 }
 
@@ -93,6 +104,65 @@ header {
 }
 
 .btn-hero-signup:active {
+    background-color: #4F378B;
+    color: white;
+}
+
+.link-hero-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 120px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.192);
+    box-shadow: 0 0 8px rgb(44, 44, 44);
+    border-radius: 12px;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(30px);
+}
+
+.link-hero-menu.open {
+    height: 360px;
+}
+
+.link-hero-menu a {
+    text-decoration: none;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+.link-hero-menu a {
+    text-decoration: none;
+    color: #6D2F9E;
+    margin: 0 16px;
+}
+
+.link-hero-menu a:hover {
+    color: #B878EB;
+    transition: 0.5s;
+}
+
+.link-hero-menu a:active {
+    color: #4F378B;
+}
+
+.link-hero-menu .btn-hero-signup {
+    width: 90%;
+    font-size: 28px;
+}
+
+.link-hero-menu .btn-hero-signup:hover {
+    background-color: white;
+    border: 3px solid #6D2F9E;
+    color: #6D2F9E;
+    transition: 0.5s;
+}
+
+.link-hero-menu .btn-hero-signup:active {
     background-color: #4F378B;
     color: white;
 }
@@ -203,6 +273,7 @@ header {
 .hero-rakit-flex-card {
     display: flex;
     margin: 48px auto;
+    justify-content: center;
     gap: 134px;
 }
 
@@ -264,11 +335,10 @@ header {
 }
 
 .hero-beli {
-    padding: 0 127px;
+    padding: 0 190px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 209px;
     background-color: #6D2F9E;
     height: 837px;
 }
@@ -278,7 +348,7 @@ header {
 }
 
 .hero-beli-detail-h1 {
-    font-size: 64px;
+    font-size: 60px;
     font-weight: 800;
     color: white;
     font-family: "Raleway", sans-serif;
@@ -334,11 +404,10 @@ header {
 }
 
 .hero-forum {
-    padding: 0 127px;
+    padding: 0 188px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 209px;
 }
 
 .hero-forum-detail-h1 {
@@ -468,4 +537,820 @@ hr {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+@media screen and (max-width: 1668px) {
+    .img-assets-hero {
+        width: 450px;
+    }
+
+    .img-assets-hero-beli {
+        width: 650px;
+        height: auto;
+    }
+
+    .hero-forum .hero-rakit-flex-card {
+        gap: 75px;
+    }
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card {
+        width: 300px;
+        height: 595px;
+    }
+    
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-img {
+        width: 210px;
+        height: 320px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p {
+        font-size: 20px;
+        width: 197px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p-sub {
+        font-size: 16px;
+        width: 197px;
+    }
+    .hero-detail-h1 {
+        width: 680px;
+        font-size: 84px;
+    }
+
+    .hero-detail-p {
+        font-size: 28px;
+    }
+
+    .hero-beli-detail-h1 {
+        font-size: 48px;
+        margin-left: auto;
+        width: 579px;
+        height: auto;
+    }
+
+    .hero-beli-detail-p {
+        font-size: 28px;
+        width: 597px;
+        margin-left: auto;
+    }
+    .hero-forum-detail-h1 {
+        font-size: 84px;
+        width: 680px;
+    }
+
+    .hero-forum-detail-p {
+        font-size: 28px;
+        width: 597px;
+    }
+
+    .hero-detail-btn {
+        width: 155px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    .hero-beli-detail-btn {
+        width: 155px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    hr {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1620px) {
+    .hero-rakit-flex-card {
+        gap: 90px;
+    }
+}
+
+@media screen and (max-width: 1540px) {
+    .footer-hero-after {
+        width: 1300px;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    .hero {
+        gap: 100px;
+    }
+    .img-assets-hero {
+        width: 400px;
+        height: auto;
+    }
+
+    .hero-detail-h1 {
+        font-size: 64px;
+    }
+
+    .hero-detail-p {
+        font-size: 24px;
+        width: 430px;
+    }
+
+    .hero-rakit-flex-card {
+        gap: 48px;
+    }
+
+    .hero-beli {
+        height: 637px;
+    }
+
+    .img-assets-hero-beli {
+        width: 580px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .hero-beli-detail-h1 {
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+    .hero-beli-detail-p {
+        font-size: 24px;
+        width: 497px;
+        height: auto;
+        margin: 0 0 24px auto;
+    }
+
+    .hero-beli-detail-btn {
+        font-size: 24px;
+    }
+
+    .hero-forum {
+        gap: 40px;
+    }
+    .hero-forum-detail-h1 {
+        font-size: 64px;
+        width: 460px;
+        height: auto;
+    }
+
+    .hero-forum-detail-p {
+        font-size: 24px;
+        width: 457px;
+    }
+
+    .hero-forum-detail-btn {
+        font-size: 24px;
+        width: 230px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card {
+        height: 545px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p {
+        height: auto;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .nav-status {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .hero-rakit-card {
+        width: 300px;
+        height: 595px;
+    }
+
+    .rakit-card-img {
+        width: 210px;
+        height: 320px;
+    }
+
+    .rakit-card-p {
+        font-size: 20px;
+        width: 197px;
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    .rakit-card-p-sub {
+        font-size: 16px;
+        width: 197px;
+    }
+    
+    .nav-status {
+        margin: 60px auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .link-hero a{
+        font-size: 24px;
+    }
+    .btn-hero-signup {
+        width: 124px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .footer-hero-after {
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    header {
+        padding: 0 100px;
+    }
+    .img-assets-hero {
+        width: 280px;
+        height: auto;
+    }
+
+    .img-assets-hero-beli {
+        width: 480px;
+    }
+
+    .hero-forum {
+        gap: 30px;
+    }
+
+    .hero-rakit-card {
+        width: 270px;
+        height: 540px;
+    }
+
+    .rakit-card-img {
+        width: 180px;
+        height: 250px;
+    }
+
+    .rakit-card-p {
+        font-size: 20px;
+        width: 180px;
+    }
+    
+    .rakit-card-p-sub {
+        font-size: 20px;
+        width: 180px;
+    }
+
+    .nav-status {
+        margin: 68px auto 0 auto;
+        padding: 0 45px;
+    }
+
+    .hero-forum .hero-rakit-flex-card {
+        gap: 30px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card {
+        width: 270px;
+        height: 540px;
+    }
+    
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-img {
+        width: 180px;
+        height: 250px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p {
+        font-size: 20px;
+        width: 180px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p-sub {
+        font-size: 16px;
+        width: 180px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .nav-status {
+        margin: 68px auto 0 auto;
+        padding: 0 45px;
+    }
+
+    .footer-hero .footer-hero-detail .logo-detail-hero {
+        font-size: 32px;
+    }
+
+    .footer-hero .footer-hero-detail .logo-img-hero {
+        width: 90px;
+        height: auto;
+    }
+
+    .footer-hero-detail-p {
+        width: 457px;
+        height: 174px;
+        text-align: justify;
+        font-size: 24px;
+    }
+    
+    .footer-hero-link-h3 {
+        margin-top: 0px;
+        margin-bottom: 25px;
+        font-size: 24px;
+        font-weight: 900;
+        -webkit-text-stroke: 1.5px black;
+    }
+    
+    .link-hero-footer {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+    }
+
+    .social-media {
+        font-size: 24px;
+    }
+
+    .footer-hero-link li {
+        list-style: none;
+        align-items: center;
+        position: relative;
+        margin-bottom: 15px;
+        left: 25px;
+    }
+    
+    .footer-hero-link li::before {
+        content: "▶";
+        font-size: 24px;
+        position: relative;
+        top: -5px;
+        left: -15px;
+    }
+
+    hr {
+        width: 83%;
+    }
+
+    .footer-hero-after {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    header {
+        padding: 0 50px;
+    }
+    .link-hero a{
+        font-size: 20px;
+    }
+    .btn-hero-signup {
+        font-size: 20px;
+    }
+    .hero {
+        gap: 25px;
+    }
+
+    .hero-detail-h1 {
+        width: auto;
+    }
+
+    .img-assets-hero-beli {
+        width: 290px;
+        object-position: 0;
+    }
+
+    .hero-rakit-flex-card {
+        flex-wrap: wrap;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card {
+        width: 320px;
+        height: 574px;
+        background-color: white;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+    }
+
+    #optional {
+        display: none;
+    }
+
+    .hero-forum {
+        gap: 97px;
+    }
+    
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-img {
+        object-fit: cover;
+        width: 206px;
+        height: 297px;
+        border-radius: 12px;
+        margin-top: 58px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p {
+        width: 199px;
+        height: auto;
+        font-size: 20px;
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p-sub {
+        width: 199px;
+        height: 41px;
+        font-size: 20px;
+        text-align: left;
+        margin: 0 auto;
+        color: #AFAFAF;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .nav-status {
+        padding: 0 57px;
+        display: flex;
+        margin: 45px auto;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .footer-hero-detail-p {
+        font-size: 20px;
+        width: 380px;
+    }
+
+    .footer-hero-link-h3 {
+        font-size: 20px;
+        -webkit-text-stroke: 1px black ;
+    }
+
+    .link-hero-footer {
+        font-size: 20px;
+    }
+
+    .social-media {
+        font-size: 20px;
+    }
+
+    hr {
+        width: 75%;
+    }
+
+    .footer-hero-after {
+        font-size: 16px;
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .menu-btn {
+        display: flex;
+    }
+    .link-hero {
+        display: none;
+    }
+
+    .link-hero-menu {
+        display: block;
+    }
+
+    .hero-beli-detail-h1 {
+        font-size: 40px;
+        width: 436px;
+    }
+
+    .hero-beli-detail-p {
+        width: 431px;
+    }
+
+    .hero-forum {
+        gap: 10px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card {
+        width: 320px;
+        height: 574px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-img {
+        object-fit: cover;
+        width: 206px;
+        height: 297px;
+        border-radius: 12px;
+        margin-top: 58px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p {
+        width: 199px;
+        height: auto;
+        font-size: 20px;
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p-sub {
+        width: 199px;
+        height: 41px;
+        font-size: 20px;
+        text-align: left;
+        margin: 0 auto;
+        color: #AFAFAF;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .nav-status {
+        padding: 0 57px;
+        display: flex;
+        margin: 45px auto;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-detail {
+        margin-top: 48px;
+    }
+
+    .img-assets-hero {
+        width: auto;
+    }
+
+    .hero-rakit-detail-h1, .hero-rakit-detail-p {
+        width: auto;
+    }
+
+    .hero-beli {
+        flex-direction: column-reverse;
+        height: 888px;
+
+    }
+
+    .hero-beli-detail {
+        margin: 0;
+    }
+
+    .hero-beli-detail-h1, .hero-beli-detail-p {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-beli-detail-btn {
+        margin: 0 auto 32px auto;
+    }
+
+    .img-assets-hero-beli {
+        width: auto;
+    }
+    
+    .hero-forum {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    #optional {
+        display: block;
+    }
+    .footer-hero {
+        height: 930px;
+    }
+    .footer-hero-before {
+        display: grid;
+    }
+
+    .footer-hero-after {
+        width: 600px;
+    }
+
+}
+
+@media screen and (max-width: 840px) {
+    .hero-rakit-flex-card {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .hero-rakit-card {
+        width: 320px;
+        height: 574px;
+    }
+    
+    .rakit-card-img {
+        object-fit: cover;
+        width: 206px;
+        height: 297px;
+        border-radius: 12px;
+        margin-top: 58px;
+    }
+
+    .rakit-card-p {
+        width: 199px;
+        height: auto;
+        font-size: 20px;
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+
+    .rakit-card-p-sub {
+        width: 199px;
+        height: 41px;
+        font-size: 20px;
+        text-align: left;
+        margin: 0 auto;
+        color: #AFAFAF;
+    }
+
+    .nav-status {
+        padding: 0 57px;
+        display: flex;
+        margin: 45px auto;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .img-assets-hero {
+        width: 365px;
+    }
+
+    .img-assets-hero-beli {
+        width: 457px;
+    }
+
+    .hero-rakit-detail-h1 {
+        font-size: 48px;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 648px) {
+    .footer-hero-after {
+        width: 400px;
+    }
+
+    .hero-rakit-btn {
+        font-size: 24px;
+        width: 250px;
+        margin: 36px 0px;
+    }
+
+}
+
+@media screen and (max-width: 586px) {
+    .hero-detail-h1 {
+        font-size: 48px;
+        width: auto;
+    }
+
+    .hero-detail-p {
+        width: auto;
+    }
+
+    .hero-rakit-card {
+        width: 270px;
+        height: 540px;
+    }
+
+    .rakit-card-img {
+        width: 180px;
+        height: 250px;
+    }
+
+    .rakit-card-p {
+        font-size: 20px;
+        width: 180px;
+    }
+    
+    .rakit-card-p-sub {
+        font-size: 20px;
+        width: 180px;
+    }
+
+    .nav-status {
+        margin: 68px auto 0 auto;
+        padding: 0 45px;
+    }
+    
+    .img-assets-hero-beli {
+        width: 357px;
+    }
+
+    .hero-forum-detail-h1 {
+        font-size: 40px;
+        width: 280px;
+    }
+    .hero-forum-detail-p {
+        width: 330px;
+    }
+
+    .hero-rakit-flex-card {
+        margin: 48px auto;
+    }
+
+    .hero-rakit-btn {
+        margin: 36px auto;
+    }
+
+    .hero-forum .hero-rakit-flex-card {
+        display: flex;
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 527px) {
+    .hero-rakit-flex-card {
+        display: flex;
+        flex-direction: row;
+        margin: 48px auto;
+    }
+
+    .hero-forum .hero-rakit-flex-card {
+        flex-direction: column;
+    }
+
+    #optional-blank {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 439px) {
+    .img-assets-hero {
+        width: 265px;
+    }
+
+    .hero-beli-detail-h1 {
+        font-size: 32px;
+        width: auto;
+    }
+
+    .hero-beli-detail-p {
+        font-size: 20px;
+        width: auto;
+    }
+
+    .hero-rakit-btn {
+        width: 200px;
+        font-size: 20px;
+    }
+
+    .hero-rakit .hero-rakit-flex-card .hero-rakit-card {
+        display: none;
+    }
+
+    .img-assets-hero-beli {
+        width: 257px;
+    }
+
+    .footer-hero-after {
+        width: auto;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card {
+        width: 270px;
+        height: 540px;
+    }
+    
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-img {
+        width: 180px;
+        height: 250px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p {
+        font-size: 20px;
+        width: 180px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .rakit-card-p-sub {
+        font-size: 16px;
+        width: 180px;
+    }
+
+    .hero-forum .hero-rakit-flex-card .hero-rakit-card .nav-status {
+        margin: 68px auto 0 auto;
+        padding: 0 45px;
+    }
+
+    .footer-hero-detail-p {
+        width: 250px;
+        margin-bottom: 64px;
+    }
+
+    .footer-hero {
+        height: 1000px;
+    }
+
+    .hero-forum-detail-h1, .hero-forum-detail-p {
+        width: auto;
+    }
+
+    .hero-forum-detail-p {
+        margin-bottom: 84px;
+    }
+
+    .logo-detail-hero {
+        display: none;
+    }
+
+    .hero-forum .hero-rakit-flex-card {
+        display: none;
+    }
+
 }
