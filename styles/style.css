@@ -23,6 +23,7 @@ header {
     color: #6D2F9E;
     top: 0;
     position: sticky;
+    z-index: 1000;
 }
 
 
@@ -177,12 +178,47 @@ header {
     color: white;
 }
 
+@keyframes appear-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes appear-right {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes appear-up {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    } to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .hero {
     padding: 0 127px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 209px;
+    animation: appear-up 0.75s;
 }
 
 .hero-detail-h1 {
@@ -226,6 +262,7 @@ header {
     width: 565px;
     height: 696px;
     margin-top: 79.680px;
+    filter: drop-shadow(-2px 2px 12px black);
 }
 
 .threshold {
@@ -249,6 +286,9 @@ header {
     color: #6D2F9E;
     font-size: 64px;
     font-weight: bold;
+    animation: appear-up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
 .hero-rakit-detail-p {
@@ -257,6 +297,9 @@ header {
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
+    animation: appear-up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
 .hero-rakit-btn {
@@ -268,6 +311,9 @@ header {
     border-radius: 12px;
     font-size: 32px;
     font-weight: 550;
+    animation: appear-up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
 .hero-rakit-btn:hover {
@@ -297,6 +343,9 @@ header {
     background-color: white;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
+    animation: appear-up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
 .rakit-card-img {
@@ -362,6 +411,9 @@ header {
 
 .hero-beli-detail {
     margin-left: auto;
+    animation: appear-right linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .hero-beli-detail-h1 {
@@ -418,6 +470,9 @@ header {
     border-radius: 12px;
     align-items: center;
     box-shadow: 0 4px 35px white;
+    animation: appear-right linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .hero-forum {
@@ -425,6 +480,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: appear-left linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .hero-forum-detail-h1 {
@@ -555,6 +613,7 @@ hr {
     margin-right: auto;
     text-align: center;
 }
+
 
 @media screen and (max-width: 1668px) {
     .img-assets-hero {
