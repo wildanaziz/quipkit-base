@@ -41,6 +41,7 @@ header {
     outline: none;
     cursor: pointer;
     font-size: 36px;
+    z-index: 1000;
 }
 
 .material-symbols-outlined {
