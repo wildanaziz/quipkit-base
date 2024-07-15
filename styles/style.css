@@ -126,18 +126,17 @@ header {
     right: 2rem;
     top: 120px;
     width: 300px;
-    background-color: rgba(255, 255, 255, 0.192);
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 0 8px rgb(44, 44, 44);
     border-radius: 12px;
     height: 0;
     overflow: hidden;
     text-align: center;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    backdrop-filter: blur(30px);
 }
 
 .link-hero-menu.open {
-    height: 360px;
+    height: 300px;
 }
 
 .link-hero-menu a {
@@ -614,7 +613,6 @@ hr {
     margin-right: auto;
     text-align: center;
 }
-
 
 @media screen and (max-width: 1668px) {
     .img-assets-hero {
