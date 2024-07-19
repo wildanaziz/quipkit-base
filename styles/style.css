@@ -59,7 +59,7 @@ header {
     display: none;
     align-items: center;
     margin-left: auto;
-    font-size: 46px;
+    font-size: 16px;
     cursor: pointer;
 }
 .logo-hero {
@@ -77,7 +77,7 @@ header {
     margin-left: auto;
     display: flex;
     align-items: center;
-    font-size: 32px;
+    font-size: 16px;
 }
 
 .link-hero a {
