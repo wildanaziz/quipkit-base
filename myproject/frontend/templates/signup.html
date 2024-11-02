@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up - QuipKit</title>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <section class="left-section">
+            <div class="logo-hero">
+                <img class="logo" src="{% static 'img/icon/LOGO-QUIPKIT.png' %}" alt="logo">
+                <p>QuipKit</p>
+            </div>
+            <img class="login-svg" src="{% static 'img/assets/undraw_access_account_re_8spm.svg' %}" alt="signup-svg">
+            <p class="login-p">Join QuipKit and get started today.</p>
+        </section>
+        <section class="right-section">
+            <div id="particles-js"></div>
+            <div class="login">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="login-card">
+                        <h1 class="login-h1">Sign Up</h1>
+                        
+                        {% if form.errors %}
+                        <div class="error-message">
+                            <ul>
+                                {% for field in form %}
+                                    {% for error in field.errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                        
+                        <div class="input_box">
+                            <input type="text" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" name="password1" placeholder="Password" required>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" name="password2" placeholder="Confirm Password" required>
+                        </div>
+                        <input class="submit" type="submit" value="Sign Up">
+                        <p class="no-account">Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/particles.js-master/particles.js' %}"></script>
+    <script src="{% static 'js/particles.js-master/demo/js/app.js' %}"></script>
+</body>
+</html>
